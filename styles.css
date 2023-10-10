@@ -1,0 +1,29 @@
+* {
+  font-family: 'AR One Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete {
+  background-color: #f44336;
+}
