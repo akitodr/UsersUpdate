@@ -12,21 +12,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Ubuntu&display=swap" rel="stylesheet">
-  <style>
-    a {
-      background-color: #008CBA;
-      border: none;
-      color: white;
-      padding: 6px 12px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-  </style>
-
 </head>
 <body>
   <h1>Usuários do sistema</h1>
@@ -51,13 +36,20 @@
             echo '
               <td>
                 <div class="buttons">
-                  <a href="updateForm.php?id=' .$row['id']. ' class="button">Editar</a>
-                  <input type="submit" class="button delete" name="delete" value="Delete" />
+                  <a href="updateForm.php?id=' .$row['id']. '" class="edit">Editar</a>
+                  <a href="index.php?id=' .$row['id']. '" class="delete">Delete</a>
                 </div>
               </td>'; 
             echo '<tr>';
           }
       }
+      //Código do DELETE
+        if(isset($_GET['id'])) {
+          $id = $_GET['id'];
+          $del_query = "DELETE FROM user WHERE id = '$id'";
+          $result_delete = mysqli_query($connection, $del_query);
+          header("location:index.php");
+        }
       ?>
     </table>
   </div>

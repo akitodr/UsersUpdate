@@ -24,6 +24,27 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
+a {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 .delete {
   background-color: #f44336;
+}
+
+.delete:hover {
+  background-color: #972921;
+}
+
+.edit:hover {
+  background-color: #006385;
 }
